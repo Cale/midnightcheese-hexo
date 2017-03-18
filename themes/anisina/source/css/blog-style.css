@@ -5,6 +5,12 @@
     }
 }
 
+small {
+    display: block;
+    margin-bottom: 1.6em;
+    text-align: center;
+}
+
 
 hr {
     margin:0;
