@@ -48,23 +48,19 @@ layout: layout
         color: rgba(0, 0, 0, .75)
     }
 
-    /*不显示摘要*/
     .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
         display: none
     }
 
-    /*第一个分界线去掉*/
     .custom-haojen-container hr:nth-of-type(1) {
         display: none;
     }
 
-    /*主题*/
     .custom-haojen-container .post-preview:nth-of-type(1) > a {
         display: table-cell;
         vertical-align: middle;
     }
 
-    /*诗词标题*/
     .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
         font-size: 35px;
         font-family: STKaiti;
@@ -97,7 +93,6 @@ layout: layout
         }
     }
 
-    /*手机屏幕*/
     @media (max-width: 400px) {
         .custom-haojen-container .post-preview:nth-child(1) {
             height: 195px;
@@ -156,7 +151,6 @@ layout: layout
             <!-- About Me -->
             <section class="visible-md visible-lg" style="padding: 0 18px">
                 <div class="short-about">
-                    <!--侧边栏头像-->
                     <% if(config['sidebar-avatar']) { %>
                     <img src="<%= config['sidebar-avatar'] %>"/>
                     <% } %>
@@ -165,7 +159,7 @@ layout: layout
                     <p><%= config['sidebar-about-description'] %></p>
                     <% } %>
                     <hr>
-                    <!-- SNS Link 社交 -->
+                    <!-- SNS Link -->
                     <ul class="list-inline">
                         <% if (config.RSS) { %>
                         <li>
@@ -245,7 +239,7 @@ layout: layout
                 </div>
             </section>
 
-            <!-- Featured Tags  标签 -->
+            <!-- Featured Tags -->
             <% if(config['featured-tags']) { %>
             <section>
                 <div class="tags">
