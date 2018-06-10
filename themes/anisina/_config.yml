@@ -66,7 +66,28 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
 # friends
-friends:  # 友链
+friends: [
+    {
+        title: "Amateur Radio Weekly",
+        href: "http://hamweekly.com/"
+    },
+    {
+        title: "Rain Map",
+        href: "http://assets.midnightcheese.com/wx/rain/"
+    },
+    {
+        title: "Peabody Plaza Timelapse",
+        href: "http://nashville.calemooth.com/"
+    },
+    {
+        title: "Candor Gallery",
+        href: "http://candorgallery.com/"
+    },
+    {
+        title: "Traffic camera widget",
+        href: "http://tncam.midnightcheese.com/"
+    },
+]
 
 # Directory
 source_dir: source
