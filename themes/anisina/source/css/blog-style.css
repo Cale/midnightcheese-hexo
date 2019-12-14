@@ -412,6 +412,7 @@ article blockquote footer{
     display: table;
     width: 100%;
     margin-bottom: 20px;
+    filter: grayscale(100%) contrast(80%);
 }
 
 .intro-header>.container{
@@ -448,8 +449,9 @@ article blockquote footer{
 }
 
 .intro-header .post-heading h1 {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.95);
     margin-top: 0;
+    padding: 20px;
     font-size: 24px;
     margin-bottom: 24px;
     text-align: center;
@@ -493,8 +495,13 @@ article blockquote footer{
     }
 }
 
+.post-preview:nth-child(1) {
+    filter: grayscale(100%) contrast(80%);
+}
+
 .post-preview:nth-child(1) .post-title {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #000;
+    padding: 10px 0 10px 0;
 }
 
 .custom-haojen-container .post-preview:not(:nth-child(1)) {
