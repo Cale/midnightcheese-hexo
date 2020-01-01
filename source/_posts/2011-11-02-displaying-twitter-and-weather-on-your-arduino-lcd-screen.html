@@ -271,13 +271,20 @@ displayWX();
 The PHP script requires an OS X specific serial class to talk with the Arduino board. I'm using <a href="https://gist.github.com/51342">this serial class by Rémy Sanchez</a>, modified by <a href="http://andrewhutchings.com/php-serial-class-for-os-x">Andrew Hutchings</a>. You'll need to define your serial device (which you can find in /dev). It should look something like /dev/cu.usbserial-A900adK5.</p>
 
 <p><strong>Bash Start-up File</strong>
-In addition, due to the way OS X handles communication over the USB connection (you can <a href="http://www.mydarkmaterials.co.uk/2008/11/30/interfacing-php-with-the-arduino/">read more about it here</a>) we need to run a sleep command to prevent the Arduino from resetting itself each time you send data to it.</p>
+In addition, due to the way OS X handles communication over the USB connection (you can <a href="https://web.archive.org/web/20110313064208/http://www.mydarkmaterials.co.uk/about/">read more about it here</a>) we need to run a sleep command to prevent the Arduino from resetting itself each time you send data to it.</p>
 
 <pre>
 <code lang="bash">
 #!/bin/bash
 
-nohup sleep 36000 &lt; /dev/cu.usbserial-A900adK5 &amp;
+# Persist LCD screen (prevent Arduino from resetting)
+
+# OS X
+nohup sleep 360000 < /dev/cu.usbserial-A900adK5 &
+
+# Linux
+#nohup sleep 360000 < /dev/ttyUSB1 &
+#stty -F /dev/ttyUSB1 -hupcl
 
 php tweet-arduino.php
 </code>
